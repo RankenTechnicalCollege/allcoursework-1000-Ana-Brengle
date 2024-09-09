@@ -1,0 +1,12 @@
+footer{
+  background-color: lightblue;
+  font-family: Arial;
+  color: darkblue;
+  padding: 10px;
+  border: 1px dashed darkblue;
+}
+#notice{
+  color: black;
+  width: 80%;
+  margin: auto;
+}

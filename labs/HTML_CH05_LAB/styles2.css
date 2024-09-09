@@ -1,0 +1,13 @@
+h1{
+  border-bottom: 3px dotted;
+  padding-bottom: 5px;
+  color: #0211E0;
+}
+#feature{
+  font-size: small;
+  color:red;
+  font-family: Arial, sans-serif;
+  background-color:white;
+  width: 80%;
+  text-shadow: 2px 3px rgba(13, 233, 167, 0.719);
+}
