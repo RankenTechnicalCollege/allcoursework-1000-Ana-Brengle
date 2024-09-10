@@ -1,0 +1,37 @@
+img{
+  border: 5px solid #F27405;
+  border-radius: 10px;
+
+}
+body{
+  background-color: #A68863;
+}
+ul{
+    border: 2px solid black;
+    padding: 10px;           
+    margin: 20px;              
+    list-style-type: circle;
+    background-color: #D9A404;
+    font-family: monospace;
+    font-size: 2em;
+}
+.me{
+  font-family: fantasy;
+  text-align: justify;
+}
+h1{
+  color: #400101;
+  text-shadow: -2px -2px 4px grey;
+  font-size: 400%;font-family: 'Courier New', Courier, monospace;
+}
+p{
+  font-size: 1.9em;
+}
+#container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+h2{
+  font-family: cursive;
+}

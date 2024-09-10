@@ -1,13 +1,23 @@
 h1{
   border-bottom: 3px dotted;
   padding-bottom: 5px;
-  color: #0211E0;
+  color: #485058;
 }
 #feature{
-  font-size: small;
+  font-size: larger;
   color:red;
   font-family: Arial, sans-serif;
   background-color:white;
   width: 80%;
-  text-shadow: 2px 3px rgba(13, 233, 167, 0.719);
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.719);
+}
+p{
+  background-color: rgb(215, 68, 63);
+  color: #333A42;
+}
+body{
+  background-color: rgb(90, 20, 42);
+}
+main{
+  color: beige;
 }
