@@ -1,0 +1,37 @@
+nav{
+  margin: 10px 5px;
+  padding: 12px 15px;
+}
+p{
+  margin: 15px;
+  padding: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  line-height: 2.0em;
+  width: 80%;
+}
+#wrapper{
+  margin: 10px 5px 15px 20px;
+  padding: 5px;
+}
+ul{
+  margin: 20px;
+  padding: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer{
+  margin: 8px;
+  padding: 10px;
+}
+h1, h2{
+  border: #FAD7D2;
+  border-style: dashed;
+  border-radius: 10px;
+  background-image: linear-gradient(#A3D6B6,#F2888A);
+}
+body{
+  background-image: linear-gradient(#68BA8A,#FAD7D2);
+}
+h2{
+  margin-left: auto;
+  margin-top: 80px;
+}
