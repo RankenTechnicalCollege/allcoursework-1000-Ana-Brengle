@@ -179,7 +179,15 @@ footer {
   flex-direction: row;
 }
 .above-container{
- display: block;
+ display: flex;
  flex-direction: row;
  align-items: center;
+}
+.above-container p{
+  border-radius: 5px;
+  background-color: #7E7E7F;
+  color: black;
+  font-family: "Oswald", sans-serif;
+  padding: 10px 20px;
+  margin: 10px;
 }
