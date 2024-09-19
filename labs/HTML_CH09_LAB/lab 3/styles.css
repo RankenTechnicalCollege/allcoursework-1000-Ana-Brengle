@@ -26,7 +26,7 @@ header{
 }
 .navbar-menu{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 10px;
 }
 .navbar-links{
@@ -34,9 +34,8 @@ header{
   padding: 10px;
   margin: 10px;
   display: flex;
-  text-align: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 20px;
 }
 .navbar-links a{
@@ -50,13 +49,18 @@ header{
 .navbar-links a:hover,.navbar-links a:focus{
   background-color: #B4BF5D;
   }
+.main-content{
+  display: flex;
+  flex-direction: row;
+  background-color: #592521;
+  color: white;
+  border-radius: 5px;
+}
 .headshot-content{
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: #592521;
   flex-direction: column;
-  border-radius: 10px;
 }
 .headshot{
   display: flex;
@@ -67,28 +71,21 @@ header{
   height: auto;
   margin-right: 20px;
 }
-main{
-  background-color: #592521;
-  color: white;
-}
 .education{
   display: flex;
   flex-direction: row; 
+  justify-content: space-evenly;
 }
 .education li{
-  margin: 5px;
+  margin: 15px;
 }
 .edu-logo{
-  align-items: center;
+text-align: center;
 }
 .edu-logo a{
   text-decoration: none;
   color: white;
   margin: 15px;
-  align-items: center;
-}
-span{
-  text-align: center;
 }
 footer{
   display: flex;
