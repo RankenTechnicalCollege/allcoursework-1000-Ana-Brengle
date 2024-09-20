@@ -191,3 +191,8 @@ footer {
   padding: 10px 20px;
   margin: 10px;
 }
+@media screen and (max-width: 600px){
+  .navbar-menu{
+    flex-direction: column;
+  }
+}
