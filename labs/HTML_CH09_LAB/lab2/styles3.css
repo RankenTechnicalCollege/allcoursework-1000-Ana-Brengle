@@ -45,7 +45,7 @@ body{
   margin: 0;
   display: flex;
   text-align: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 .navbar-links li{
