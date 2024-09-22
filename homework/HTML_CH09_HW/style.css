@@ -11,6 +11,7 @@
 }
 .navbar{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   font-size: 20px;
   margin: 5px;
@@ -82,7 +83,6 @@ font-size: 20px;
 }
 .aside{
   display: flex;
-  display: block;
   justify-content: center;
   align-items: left;
   margin: 5px;
@@ -90,6 +90,7 @@ font-size: 20px;
   flex-basis: 20%;
   background-color: #7E7E7F;
   border-radius: 5px;
+  flex-direction: column;
 }
 aside p{
   color: black;
@@ -97,5 +98,19 @@ aside p{
   font-size: 20px;
 }
 .left-pic{
-  margin-left: 700px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width:600px){
+  .navbar{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:900px){
+  .navbar,{
+    flex-direction: column;
+  }
+  .artist-list{
+    flex-wrap: wrap;
+  }
 }

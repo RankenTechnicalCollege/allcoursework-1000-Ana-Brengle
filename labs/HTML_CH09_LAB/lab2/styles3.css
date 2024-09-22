@@ -192,7 +192,34 @@ footer {
   margin: 10px;
 }
 @media screen and (max-width: 600px){
-  .navbar-menu{
+  .navbar-links, .food-product, .merch-product{
+    flex-direction: column;
+  }
+  .aside{
+    order: 1;
+    width: 100%;
+  }
+  main{
+    order: 2;
+    width:100%;
+  }
+  .aside-left{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar-links,.food-product, .merch-product{
+    flex-direction: column;
+  }
+  .aside{
+    order: 1;
+    width: 100%;
+  }
+  main{
+    order: 2;
+    width:100%;
+  }
+  .aside-left{
     flex-direction: column;
   }
 }
