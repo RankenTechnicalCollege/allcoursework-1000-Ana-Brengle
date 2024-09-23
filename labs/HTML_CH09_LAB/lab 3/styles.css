@@ -91,3 +91,21 @@ footer{
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width:600px) {
+  .header, .navbar-links{
+    flex-direction: column;
+    justify-items: center;
+  }
+  .main-content, .education{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:1200px) {
+  .header, .navbar-links{
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-content, .education{
+    flex-direction: column;
+  }
+}
