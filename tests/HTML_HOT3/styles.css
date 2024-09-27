@@ -13,6 +13,10 @@ header{
   flex-direction: column;
   align-items: center;
 }
+.header-left ul{
+  margin: 0;
+  padding: 0;
+}
 .navbar-links{
   list-style-type: none;
   display: flex;
@@ -20,7 +24,7 @@ header{
   align-items: center;
 }
 .navbar-links li{
-  padding: 5px;
+  padding: 10px;
 }
 .navbar-links a{
   text-decoration: none;
@@ -77,9 +81,28 @@ header{
   color: white;
   text-align: center;
 }
-@media screen and (max-width:600) {
- header{
-  flex-direction: column;
- }
+footer{
+  text-align: center;
+  background-color: #14D90D;
+}
 
+
+@media  (max-width:600px) {
+  header{
+    flex-direction: column;
+  }
+  .top-section{
+    flex-direction: column;
+  }
+  .bottom-section{
+    flex-direction: column;
+  }
+  .navbar-links{
+    flex-direction: column;
+  }
+}
+@media (max-width:1200px) {
+  .bottom-section{
+    flex-wrap: wrap;
+  }
 }
