@@ -9,11 +9,11 @@
 <body>
   <h1>Slide 32 - Short 12-2</h1>
   <div class="table-1">
-  <table style="width: 100%;">
+  <table style="width: 90%;">
     <tr>
-      <th>Name</th>
-      <th>E-mail</th>
-      <th id="row3">Years of Service</th>
+      <th scope="col">Name</th>
+      <th scope="col">E-mail</th>
+      <th scope="col" class="row-3">Years of Service</th>
     </tr>
     <tr>
       <td>Joel Murach</td>
@@ -54,18 +54,20 @@
   </div>
   <h1>Employee Table</h1>
 <div class="table-2">
-  <table style="width: 100%;">
+  <figure>
+    <figcaption>Employee Table</figcaption>
+  <table style="width: 90%;">
     <thead>
      <tr>
-      <th>Department</th>
-      <th>Name</th>
-      <th> E-mail</th>
-      <th id="row3">Years of Service</th>
+      <th scope="col">Department</th>
+      <th scope="col">Name</th>
+      <th scope="col"> E-mail</th>
+      <th scope="col" class="row-3">Years of Service</th>
      </tr>
     </thead>
     <tbody>
       <tr>
-        <th rowspan="3" class="header2">Editorial</th>
+        <th scope="row" rowspan="3" class="header2">Editorial</th>
         <td>Joel Murach</td>
         <td>joelmurach@yahoo.com</td>
         <td class="numbers">22</td>
@@ -81,7 +83,7 @@
         <td class="numbers">4</td>
       </tr>
       <tr>
-        <th rowspan="2" class="header2">Marketing</th>
+        <th scope="row" rowspan="2" class="header2">Marketing</th>
         <td>Judy Taylor</td>
         <td>judy@murach.com</td>
         <td class="numbers">39</td>
@@ -92,7 +94,7 @@
         <td class="numbers">10</td>
       </tr>
       <tr>
-        <th rowspan="2" class="header2">Customer Service</th>
+        <th scope="row" rowspan="2" class="header2">Customer Service</th>
         <td>Kelly Slivkoff</td>
         <td>kelly@murach.com</td>
         <td class="numbers">25</td>
@@ -105,11 +107,12 @@
     </tbody>
     <tfoot>
       <tr>
-        <th colspan="3" class="footer">Total Years of Service</th>
+        <th scope="row" colspan="3" class="footer">Total Years of Service</th>
         <td class="numbers"><strong>105</strong></td>
       </tr>
     </tfoot>
   </table>
+</figure>
 </div>
 </body>
 </html>
