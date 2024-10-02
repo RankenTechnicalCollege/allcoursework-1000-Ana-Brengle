@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Music Group Survey</h1>
+  <form action="#" method="post">
+    <!--TEXTBOX-->
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">E-mail Address:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <!--RADIO BUTTON-->
+    <fieldset class="fieldset">
+      <legend>Select Your Favorite Types of Music</legend>
+      <label>
+        <input type="radio" name="option" value="option1" required>Pop
+      </label>
+      <label>
+        <input type="radio" name="option" value="option2" required>Classical
+      </label>
+      <label>
+        <input type="radio" name="option" value="option3" required>Rock
+      </label>
+      <label>
+        <input type="radio" name="option" value="option4" required>Folk
+      </label>
+    </fieldset>
+    <!--CHECKBOX-->
+    <fieldset class="fieldset">
+      <legend>Select how often you purchase Music CDS</legend>
+      <label>
+        <input type="checkbox" name="time1">Weekly
+      </label>
+      <label>
+        <input type="checkbox" name="time2">Monthly
+      </label>
+      <label>
+        <input type="checkbox" name="time3">Daily
+      </label>
+      <label>
+        <input type="checkbox" name="time4">Few each year
+      </label>
+    </fieldset>
+    <!--SELECT BOX-->
+    <div>
+     <label for="items">Select locations you listen to Music</label>
+      <select name="items" id="items" size="3">
+        <option value="item1">The car</option>
+        <option value="item2">At home</option>
+        <option value="item3">Outside</option>
+        <option value="item4">Anywhere</option>
+    </select>
+    </div>
+    <div>
+      <label for="comments">What role does music play in your life?</label>
+      <textarea name="comments" id="comments" cols="60" rows="3"></textarea>
+    </div>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
+
+
+

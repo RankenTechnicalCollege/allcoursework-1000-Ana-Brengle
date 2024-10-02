@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Order Form</h1>
+  <div class="container mt-5">
+    <form action="/order" id="order-form" method="post">
+      <fieldset class="border p-4 mb-4">
+        <legend class="w-auto">Personal Information</legend>
+        <div class="container">
+          <div class="row">
+            <div class=" form-group col-lg-6 col-md-6">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" id="firstName" name="first_name" class="form-control" autocomplete="given-name" required>
+            </div>
+            <div class=" form-group col-md-6">
+              <label for="familyName" class="form-label">Last Name</label>
+              <input type="text" id="familyName" name="family_name" class="form-control" autocomplete="family-name" required>
+            </div>
+            <div class="form-group col-12" >
+              <label for="phoneNumber" class="form-label">Phone Number</label>
+              <input type="tel" id="phoneNumber" name="phone_number" class="form-control" autocomplete="tel" required>
+            </div>
+            <div class="form-group col-lg-6 col-md-6">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" autocomplete="email" required>
+            </div>
+            <div class="form-group col-lg-6 col-md-6">
+              <label for="confirmEmail" class="form-label">Confirm Email Address</label>
+              <input type="email" id="confirmEmail" name="confirm-email" class="form-control" autocomplete="email" required>
+            </div>
+            <div class="form-group col-lg-6 col-md-6">
+              <label for="password" class="form-label">Password</label>
+              <input type="text" id="password" name="password" class="form-control" autocomplete="new-password" required>
+            </div>
+            <div class="form-group col-lg-6 col-md-6">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="text" id="confirmPassword" name="confirm_password" class="form-control" autocomplete="new-password" required>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="border p-4 mb-4">
+        <legend class="w-auto">Credit Card Information</legend>
+        <div class="container">
+          <div class="row">
+            <div class="form-group">
+              <label for="creditCardNumber" class="form-label">Credit Card Number</label>
+              <input type="text" id="creditCardNumber" name="credit_card_number" class="form-control" autocomplete="cc-number" required>
+            </div>
+            <div class="form-group">
+              <label for="expirationDate" class="form-label">Expiration Date</label>
+              <input type="text" id="expirationDate" name="expiration_date" class="form-control" placeholder="MM/YY" autocomplete="cc-exp" required>
+            </div>
+            <div class="form-group">
+              <label for="cscCode" class="form-label">CSC Code</label>
+              <input type="text" id="cscCode" name="csc-code" class="form-control" autocomplete="cc-csc" required>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="border p-4 mb-4">
+        <legend class="w-auto">Billing Information</legend>
+        <div class="container">
+          <div class="row">
+            <div class="form-group col-lg-6 col-md-6">
+              <label for="billingStreet" class="form-label">Street Address</label>
+              <input type="text" id="billingStreet" name="billing_street" class="form-control" autocomplete="address-line1" required>
+            </div>
+            <div class="form-group col-lg-6 col-md-6">
+              <label for="billingAddressLine2" class="form-label">Address Line #2</label>
+              <input type="text" id="billingAddressLine2" name="billing_address_line2" class="form-control" autocomplete="address-line2" placeholder="apt, studio, ect." required>
+            </div>
+            <div class="form-group col-lg-6 col-md-6">
+              <label for="billingCity" class="form-label">City</label>
+              <input type="text" id="billingCity" name="billing_city" class="form-control" autocomplete="address-level2" required>
+            </div>
+            <div class="form-group col-lg-3">
+              <label for="billingState" class="form-label">State</label>
+              <select name="billingState" id="billing_state" class="form-select" required>
+                <option value="">Select State</option>
+                <option value="option1">Missouri</option>
+                <option value="option2">Illinois</option>
+              </select>
+            </div>
+            <div class="form-group col-lg-3">
+              <label for="billingZip" class="form-label">Zip Code</label>
+              <input type="text" id="billingZip" name="billing-zip" class="form-control" autocomplete="postal-code" required>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="border p-4 mb-4">
+        <legend>Shipping Address</legend>
+        <div class="container">
+          <div class="row">
+            <div class="form-group col-12">
+              <label for="shippingStreet" class="form-label">Street Address</label>
+              <input type="text" id="shippingStreet" name="shipping_street" class="form-control" autocomplete="address-line1" required>
+            </div>
+            <div class="form-group col-12">
+              <label for="shippingAddressLine2" class="form-label">Address Line #2</label>
+              <input type="text" id="shippingAddressLine2" name="shipping_address_line2" class="form-control" autocomplete="address-line2" placeholder="apt, studio, ect." required>
+            </div>
+            <div class="form-group col-lg-3 col-md-6">
+              <label for="shippingCity" class="form-label">City</label>
+              <input type="text" id="shippingCity" name="shipping_city" class="form-control" autocomplete="address-level2" required>
+            </div>
+            <div class="form-group col-lg-3 col-md-6">
+              <label for="shippingState" class="form-label">State</label>
+              <select name="shippingState" id="shipping_state" class="form-select" required>
+                <option value="">Select State</option>
+                <option value="option1">Missouri</option>
+                <option value="option2">Illinois</option>
+              </select>
+            </div>
+            <div class="form-group col-lg-3 col-md-6">
+              <label for="shippingZip" class="form-label">Zip Code</label>
+              <input type="text" id="shippingZip" name="shipping_zip" class="form-control" autocomplete="postal-code" required>
+            </div>
+            <div>
+              <input type="checkbox" id="sameAsBilling" name="same_as_billing" class="form-check-input">
+              <label for="sameAsBilling" class="form-check-label">Same as billing address?</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <button type="button" class="m-3 btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
