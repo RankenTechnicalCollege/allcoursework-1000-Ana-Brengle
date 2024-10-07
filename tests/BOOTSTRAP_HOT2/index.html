@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Bootstrap Test 2</title>
+</head>
+<body>
+ <div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              The Dessert
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Every bite<strong>Pumpkin Coffee Cake </strong> with its crumb topping is deliciously moist and packed with flavor, thanks to key ingredients like pumpkin puree, pure maple syrup, and seasonal spices such as ground nutmeg, ginger, and cloves. Topped with a generous layer of brown sugar cinnamon crumble and drizzled with a simple vanilla icing, this spiced breakfast cake is a perfect treat for the fall season.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Ingredients
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              This pumpkin coffee cake is made with a <strong>delightful blend</strong> of ingredients that create a moist and flavorful treat. Key components include fresh pumpkin puree, which adds rich moisture and natural sweetness, and pure maple syrup for a touch of caramel-like flavor. Seasonal spices like ground cinnamon, nutmeg, ginger, and cloves infuse the cake with warm, comforting aromas. The crumble topping combines brown sugar, flour, and butter, adding a sweet, crunchy texture. A simple vanilla icing drizzled on top brings everything together, making it the perfect autumn indulgence.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Reviews
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              This pumpkin coffee cake has received <strong>rave reviews</strong> from everyone who’s tried it! Many have praised its moist texture and rich pumpkin flavor, highlighting the perfect balance of spices that truly captures the essence of fall. The brown sugar crumble topping adds a delightful crunch, while the vanilla icing provides a sweet finishing touch that ties it all together. Reviewers love how easy it is to make, making it an ideal choice for gatherings or cozy mornings at home. Overall, this cake has become a seasonal favorite, leaving taste buds craving more!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+              Fall Desserts<span class="badge bg-primary rounded-pill">New</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+              Apple Desserts<span class="badge bg-primary rounded-pill">Classic</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gluten Free <span class="badge bg-primary rounded-pill">Healthy</span>
+          </li>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <img src="images/Pumpkin-Coffee-Cake-4394.jpg" class="img-thumbnail" alt="Pumpkin Coffee Cake">
+    </div>
+    <div class="col-md-2">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Suggestions
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Suggestion Box</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-2">
+      <p>This is my favorite snack: <span class="h4">Yummy Snack</span></p>
+    </div>
+  </div>
+ </div>
+<div id="carouselExampleIndicators" class="carousel slide m-5" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/carousel1.webp" class="d-block w-100" alt="mini-pies">
+    </div>
+    <div class="carousel-item">
+      <img src="images/carusel2.jpg" class="d-block w-100 " alt="apple">
+    </div>
+    <div class="carousel-item">
+      <img src="images/carusel3.jpg" class="d-block w-100" alt="canberry">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="row mt-5 justify-content-center">
+  <div class="card m-5" style="width: 18rem;">
+    <img src="images/card1.webp" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pumpkin Crumb Cake Muffins</h5>
+      <p class="card-text">These super soft pumpkin crumb cake muffins are topped with pumpkin spice crumbs and finished with sweet maple icing. They’re a reader favorite and after baking one batch, you’ll understand why!</p>
+      <a href="#" class="btn btn-primary">More</a>
+    </div>
+  </div>
+  <div class="card m-5" style="width: 18rem;">
+    <img src="images/carb2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Cinnamon Crunch Bread</h5>
+      <p class="card-text">Rolled and twisted, this simple 8 ingredient bread dough transforms into an absolutely irresistible cinnamon crunch bread. Roll the dough up with a butter, cinnamon, and brown sugar filling, then create a crunch topping made from the same ingredients. Each bite is buttery, soft, and flaky with an unbelievable cinnamon sugar crunch crust on top.</p>
+      <a href="#" class="btn btn-primary">More</a>
+    </div>
+  </div>
+  <div class="card m-5" style="width: 18rem;">
+    <img src="images/card3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Apple Pie Bars</h5>
+      <p class="card-text">Made with a shortbread crust, spiced apple filling, streusel topping, and homemade salted caramel, apple pie bars are just as delicious as apple pie, but much simpler to make. You’ll love this fun twist on a classic dessert!</p>
+      <a href="#" class="btn btn-primary">More</a>
+    </div>
+  </div>
+</div>
+<div class=" container mt-5">
+  <h2 class="text-center mb-4">Icon Grid</h2>
+  <div class="row text-center">
+    <div class="col-md-6 mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bug" viewBox="0 0 16 16">
+        <path d="M4.355.522a.5.5 0 0 1 .623.333l.291.956A5 5 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A5 5 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623M4 7v4a4 4 0 0 0 3.5 3.97V7zm4.5 0v7.97A4 4 0 0 0 12 11V7zM12 6a4 4 0 0 0-1.334-2.982A3.98 3.98 0 0 0 8 2a3.98 3.98 0 0 0-2.667 1.018A4 4 0 0 0 4 6z"/>
+      </svg>
+      <p>Bug</p>
+    </div>
+    <div class="col-md-6 mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cake2" viewBox="0 0 16 16">
+        <path d="m3.494.013-.595.79A.747.747 0 0 0 3 1.814v2.683q-.224.051-.432.107c-.702.187-1.305.418-1.745.696C.408 5.56 0 5.954 0 6.5v7c0 .546.408.94.823 1.201.44.278 1.043.51 1.745.696C3.978 15.773 5.898 16 8 16s4.022-.227 5.432-.603c.701-.187 1.305-.418 1.745-.696.415-.261.823-.655.823-1.201v-7c0-.546-.408-.94-.823-1.201-.44-.278-1.043-.51-1.745-.696A12 12 0 0 0 13 4.496v-2.69a.747.747 0 0 0 .092-1.004l-.598-.79-.595.792A.747.747 0 0 0 12 1.813V4.3a22 22 0 0 0-2-.23V1.806a.747.747 0 0 0 .092-1.004l-.598-.79-.595.792A.747.747 0 0 0 9 1.813v2.204a29 29 0 0 0-2 0V1.806A.747.747 0 0 0 7.092.802l-.598-.79-.595.792A.747.747 0 0 0 6 1.813V4.07c-.71.05-1.383.129-2 .23V1.806A.747.747 0 0 0 4.092.802zm-.668 5.556L3 5.524v.967q.468.111 1 .201V5.315a21 21 0 0 1 2-.242v1.855q.488.036 1 .054V5.018a28 28 0 0 1 2 0v1.964q.512-.018 1-.054V5.073c.72.054 1.393.137 2 .242v1.377q.532-.09 1-.201v-.967l.175.045c.655.175 1.15.374 1.469.575.344.217.356.35.356.356s-.012.139-.356.356c-.319.2-.814.4-1.47.575C11.87 7.78 10.041 8 8 8c-2.04 0-3.87-.221-5.174-.569-.656-.175-1.151-.374-1.47-.575C1.012 6.639 1 6.506 1 6.5s.012-.139.356-.356c.319-.2.814-.4 1.47-.575M15 7.806v1.027l-.68.907a.94.94 0 0 1-1.17.276 1.94 1.94 0 0 0-2.236.363l-.348.348a1 1 0 0 1-1.307.092l-.06-.044a2 2 0 0 0-2.399 0l-.06.044a1 1 0 0 1-1.306-.092l-.35-.35a1.935 1.935 0 0 0-2.233-.362.935.935 0 0 1-1.168-.277L1 8.82V7.806c.42.232.956.428 1.568.591C3.978 8.773 5.898 9 8 9s4.022-.227 5.432-.603c.612-.163 1.149-.36 1.568-.591m0 2.679V13.5c0 .006-.012.139-.356.355-.319.202-.814.401-1.47.576C11.87 14.78 10.041 15 8 15c-2.04 0-3.87-.221-5.174-.569-.656-.175-1.151-.374-1.47-.575-.344-.217-.356-.35-.356-.356v-3.02a1.935 1.935 0 0 0 2.298.43.935.935 0 0 1 1.08.175l.348.349a2 2 0 0 0 2.615.185l.059-.044a1 1 0 0 1 1.2 0l.06.044a2 2 0 0 0 2.613-.185l.348-.348a.94.94 0 0 1 1.082-.175c.781.39 1.718.208 2.297-.426"/>
+      </svg>
+      <p>Cake</p>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-6 mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+      </svg>
+      <p>Half-circle</p>
+    </div>
+    <div class="col-md-6 mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cloud-fill" viewBox="0 0 16 16">
+        <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"/>
+      </svg>
+      <p>Cloud</p>
+    </div>
+  </div>
+</div>
+<footer class="bg-light mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <p>&copy; 2024 Favorite Snack</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backpack-fill" viewBox="0 0 16 16">
+          <path d="M5 13v-3h4v.5a.5.5 0 0 0 1 0V10h1v3z"/>
+          <path d="M6 2v.341C3.67 3.165 2 5.388 2 8v5.5A2.5 2.5 0 0 0 4.5 16h7a2.5 2.5 0 0 0 2.5-2.5V8a6 6 0 0 0-4-5.659V2a2 2 0 1 0-4 0m2-1a1 1 0 0 1 1 1v.083a6 6 0 0 0-2 0V2a1 1 0 0 1 1-1m0 3a4 4 0 0 1 3.96 3.43.5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14A4 4 0 0 1 8 4M4.5 9h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5"/>
+        </svg>
+      </div>
+      <div class="col-md-4 text-center">
+        <nav>
+          <ul class="list-unstyled d-flex justify-content-center">
+            <li class="mx-3"><a href="#" class="text-decoration-none">Home</a></li>
+            <li class="mx-3"><a href="#" class="text-decoration-none">Features</a></li>
+            <li class="mx-3"><a href="#" class="text-decoration-none">Pricing</a></li>
+            <li class="mx-3"><a href="#" class="text-decoration-none">FQAs</a></li>
+            <li class="mx-3"><a href="#" class="text-decoration-none">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
