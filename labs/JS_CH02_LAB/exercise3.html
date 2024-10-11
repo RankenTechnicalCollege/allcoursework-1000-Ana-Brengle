@@ -7,14 +7,14 @@
 </head>
 <body>
   <script>
-    let fahrenheit = prompt("Enter a temperature in Fahrenheit:")
+    let fahrenheit = prompt("Enter a temperature in Fahrenheit:");
 
-    fahrenheit =parseFloat(fahrenheit);
+    fahrenheit =parseInt(fahrenheit);
 
-    let celsius = (fahrenheit - 32) * (5/9);
-    celsius = celsius.toFixed(1)
+    let celsius = (fahrenheit - 32) * 5/9;
+    celsius = celsius.toFixed(0);
 
-    document.write(`Fahrenheit: ${fahrenheit}F`)
+    document.write(fahrenheit + " degrees fahrenheit to celsius " + celsius);
   </script>
 </body>
 </html>
