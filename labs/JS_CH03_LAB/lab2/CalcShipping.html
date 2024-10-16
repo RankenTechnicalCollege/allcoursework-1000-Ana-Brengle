@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Calculate Shipping and Handling</h1>
+  <form>
+    <label for="purchasePrice">Enter Purchase price:</label>
+    <input type="number" id="purchasePrice" name="purchasePrice">
+    <button type="button" onclick="calculateShipping()">Calculate Shipping and Handling</button>
+  </form>
+
+  <script>
+    function calculateShipping() {
+      var purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
+      var shippingFee;
+
+      if (purchasePrice <= 25 ) {
+        shippingFee = 1.50;
+      } else {
+        shippingFee = (purchasePrice * 10) / 100;
+      }
+
+      var totalCost = purchasePrice + shippingFee;
+      alert("Total Cost: $" + totalCost.toFixed(2));
+    }
+  
+  </script>
+</body>
+</html>

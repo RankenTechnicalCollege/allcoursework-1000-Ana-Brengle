@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Test Score</h1>
+  <script>
+    let total = 0;
+    let count = 0;
+    let score = 0;
+
+    do {
+      score = parseInt(
+        prompt("Enter a test score, or enter -1 to end scores", -1));
+
+        if (score >= 0 && score <= 100) {
+          total = total + score;
+          count++
+          document.write(`<p>Score ${count}: ${score}</p>`);
+        }
+        else if (score != -1){
+          alert("Score must by a valid number from 0 through 100.");
+        }
+    }
+    while(score != -1);
+    
+    const average = parseInt(total/count);
+    document.write(`<p>Average score is ${average}</p>`);
+  </script>
+</body>
+</html>

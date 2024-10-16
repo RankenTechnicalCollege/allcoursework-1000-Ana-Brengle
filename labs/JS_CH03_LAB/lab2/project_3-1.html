@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> Calculate Average</h1>
+  <input type="number" id="number1" value="0">
+  <input type="number" id="number2" value="0">
+  <input type="number" id="number3" value="0">
+  <input type="number" id="number4" value="0">
+  <input type="number" id="number5" value="0">
+  <button type="button" onclick="calculateAverage()">Calculate Average</button>
+  <p id="result"></p>
+
+    <script>
+      function calculateAverage() {
+        const number1 = parseFloat(document.getElementById('number1').value);
+        const number2 = parseFloat(document.getElementById('number2').value);
+        const number3 = parseFloat(document.getElementById('number3').value);
+        const number4 = parseFloat(document.getElementById('number4').value);
+        const number5 = parseFloat(document.getElementById('number5').value);
+        const average = (number1 + number2 + number3 + number4 + number5) / 5;
+        document.getElementById('result').innerText = "Average: " + average;
+      }  
+  </script>
+</body>
+</html>
