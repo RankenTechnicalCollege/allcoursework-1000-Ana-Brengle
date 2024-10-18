@@ -31,10 +31,10 @@
       futureValue += futureValue * rate / 100;
     }
 
-let futureValueMonthly= investment;
-let months = years * 12;
-for (let i = 1; i <= months; i++ ) {
-  futureValueMonthly += futureValueMonthly * ((rate / 100) / 12);
+    let futureValueMonthly= investment;
+    let months = years * 12;
+    for (let i = 1; i <= months; i++ ) {
+      futureValueMonthly += futureValueMonthly * ((rate / 100) / 12);
 }
 
     document.write(`<h1>Final Amount With Yearly Interest</h1>`)

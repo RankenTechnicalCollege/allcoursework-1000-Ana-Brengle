@@ -8,8 +8,40 @@
 <body>
   <script>
 
-    const grade = prompt('Enter numbers for letter grade');
+    document.write("<h2>Grade Results</h2>")
 
+    while(true) {
+
+      let letterGrade = '';
+      const grade = prompt('Enter a grade number 0-100(enter 999 to finish)');
+
+      if(grade ==='999') {
+        break;
+      }
+      
+      if(grade < 0 || grade > 100) {
+        alert('Enter grade between 0 and 100');
+      }
+
+      if (grade >= 88 && grade <= 100) {
+        letterGrade = 'A';
+      } else if (grade >= 80 && grade <= 100) {
+        letterGrade = 'B';
+      } else if (grade >= 68 && grade <= 79) {
+        letterGrade = 'C';
+      } else if (grade >= 60 && grade <= 67) {
+        letterGrade = 'D';
+      } else if (grade <= 60) {23
+        letterGrade = 'F';
+      }
+      
+      document.write(`Grade ${grade} = ${letterGrade}<br>`);
+
+    }
+
+
+  //  const grade = prompt('Enter numbers for letter grade');
+/*return to
     function getLetterGrade(grade) {
       if (grade >= 88 && grade <= 100) {
         return 'A';
@@ -23,8 +55,8 @@
         return 'F';
       }
     }
+    */
     
-    document.write(`Your Grade is ${letterGrade}`)
   </script>
 </body>
 </html>

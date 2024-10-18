@@ -19,17 +19,16 @@
     <label for="bmi">BMI:</label>
     <input type="text" id="bmi" name="bmi" readonly>
     <br><br>
-    <button type="button" onclick="calcBMI()">BMI Calculator</button>
+    <button type="button" onclick="
+        var weight = parseFloat(document.getElementById('weight').value);
+        var height = parseFloat(document.getElementById('height').value);
+
+        if (weight > 0 && height > 0) {
+            const bmi = (weight * 703) / (height * height);
+            document.getElementById('bmi').value = bmi.toFixed(2);
+            } else {
+              document.getElementById('bmi').value = 'Invalid input';
+            }">BMI Calculator</button>
   </form>
-
-  <script>
-    function calcBMI() {
-      var weight = parseFloat(document.getElementById('weight').value);
-      var height = parseFloat(document.getElementById('height').value);
-
-      const bmi = (weight * 703) / (height * height);
-      document.getElementById('bmi').value = bmi.toFixed(2);
-    }
-  </script>
 </body>
 </html>
