@@ -1,0 +1,73 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+header img{
+  height: 100px;
+  width: 100px;
+}
+.content{
+  height: 100vh;
+  width: 100%;
+  background-image: url(../midterm_images/ct_care_bags.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 5s;
+  background-color: #7176D9;
+
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-play-state: running;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-image: url(../midterm_images/ctc_blessing_bags.jpg);
+  }
+  20%{
+    background-image: url(../midterm_images/ctc_raffle_basket_winner.jpg);
+  }
+  100%{
+    background-image: url(../midterm_images/ct_care_bags.jpg);
+  }
+}
+
+.card{
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+}
+
+#card-1{
+  position: relative;
+  top: 200px;
+  right: 100px;
+}
+
+ #card-2{
+  position: relative;
+  left: 135%;
+ }
+
+ #card-3{
+  position: relative;
+  top: 200%;
+ }
+ 
+footer{
+  position: fixed;
+  bottom: 0; 
+  right: 0; 
+  text-align: right;
+  padding: 10px;
+  background-color: #f8f9fa;
+  width: auto;
+}

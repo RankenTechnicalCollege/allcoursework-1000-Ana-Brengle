@@ -1,0 +1,66 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+header img{
+  height: 100px;
+  width: 100px;
+}
+
+body{
+  background-image: url(/tests/MIDTERM/my_images/donate.jpeg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main{
+display: flex;
+justify-content: space-around;
+padding: 20px;
+flex-direction: column;
+align-items: center;
+}
+
+.donations{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+h1{
+  text-align: center;
+  margin: 15px;
+  padding: 5px;
+}
+
+.donation-option{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  margin: 20px;
+  background-color: #403832;
+  opacity: 0.5;
+  
+}
+
+h2, p{
+  color: white;
+  opacity: 1;
+}
+
+footer{
+  position: fixed;
+  bottom: 0; 
+  right: 0; 
+  text-align: right;
+  padding: 10px;
+  background-color: #f8f9fa;
+  width: auto;
+}
