@@ -1,73 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
   padding: 0;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-header img{
-  height: 100px;
-  width: 100px;
-}
-.content{
-  height: 100vh;
-  width: 100%;
-  background-image: url(../midterm_images/ct_care_bags.jpg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: 5s;
-  background-color: #7176D9;
-
-  animation-name: animate;
-  animation-direction: alternate-reverse;
-  animation-play-state: running;
-  animation-duration: 30s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
+#carouselExampleControls {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 700px;
+  margin: auto; /* Center the carousel */
 }
 
-@keyframes animate{
-  0%{
-    background-image: url(../midterm_images/ctc_blessing_bags.jpg);
-  }
-  20%{
-    background-image: url(../midterm_images/ctc_raffle_basket_winner.jpg);
-  }
-  100%{
-    background-image: url(../midterm_images/ct_care_bags.jpg);
-  }
+.carousel-inner {
+  height: 450px; /* Set a fixed height for the carousel */
 }
 
-.card{
-  position: relative;
-  z-index: 1;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
+.carousel-item img {
+  width: 100%; /* Make the image take up the full width */
+  height: 100%; /* Ensure the image takes up the full height */
+  object-fit: contain; /* Maintain aspect ratio while covering the area */
+}
+
+
+.photo-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.photo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
   text-align: center;
 }
-
-#card-1{
-  position: relative;
-  top: 200px;
-  right: 100px;
-}
-
- #card-2{
-  position: relative;
-  left: 135%;
- }
-
- #card-3{
-  position: relative;
-  top: 200%;
- }
- 
-footer{
-  position: fixed;
-  bottom: 0; 
-  right: 0; 
-  text-align: right;
-  padding: 10px;
-  background-color: #f8f9fa;
-  width: auto;
+.photo-img{
+  width: 100%;
+  height: 200px;
+  flex-grow: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;  
 }

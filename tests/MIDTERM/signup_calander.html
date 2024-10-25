@@ -32,9 +32,11 @@
     </nav>
 </header>
 <main>
+  <!-- SIGN UP FORM -->
   <div class="container my-5">
     <h2>Sign Up for Events</h2>
-    <form>
+    <div class="row">
+    <form class="col-md-6">
         <div class="mb-3 col-12">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" required>
@@ -51,128 +53,137 @@
                 <option>Thanksgiving Dinner Drive</option>
             </select>
         </div>
+        <div class="mb-3 col-12">
+          <label for="date" class="form-label">Date</label>
+          <input type="text" class="form-control" placeholder="mm/dd/year" id="date" required>
+        </div>
         <button type="submit" class="btn btn-primary">Sign Up</button>
     </form>
-    <section>
-      <div class="wrapper">
-        <header>
-          <p class="current-date">2024</p>
-          <div class="icons">
-            <span id="prev" class="material-symbols-rounded">chevron_left</span>
-            <span id="next" class="material-symbols-rounded">chevron_right</span>
+    <!--DROP OFF LOCATION  -->
+    <div class="col-md-6">
+      <section class="text-center" >
+        <h3>Donation Drop-Off Location</h3>
+        <p>You can drop off your donations at the following address:</p>
+        <p><strong>123 Charity Lane, Charity City, ST 12345</strong></p>
+        <p>Hours: Mon-Fri, 9 AM - 5 PM</p>
+      </section>
+    </div>
+<!-- CALENDER -->
+    <section class="mt-5">
+      <div class="event-container">
+        <h3 class="month">October</h3>
+  
+        <div class="event">
+          <div class="event-left">
+            <div class="event-date">
+              <div class="date">8</div>
+            </div>
           </div>
-        </header>
-        <div class="calendar">
-          <ul class="weeks">
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-          </ul>
-          <ul class="days">
-            <li>29</li>
-            <li>30</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-            <li>1</li>
-            <li>2</li>
-          </ul>
+  
+          <div class="event-right">
+            <h3 class="event-title">Event Title</h3>
+  
+            <div class="event-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus,
+              ratione.
+            </div>
+  
+            <div class="event-timing">
+              <img src="images/time.png" alt=""> 10:00 am
+            </div>
+          </div>
+        </div>
+  
+        <div class="event">
+          <div class="event-left">
+            <div class="event-date">
+              <div class="date">22</div>
+            </div>
+          </div>
+  
+          <div class="event-right">
+            <h3 class="event-title">Event Title</h3>
+  
+            <div class="event-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus,
+              ratione.
+            </div>
+  
+            <div class="event-timing">
+              <img src="images/time.png" alt=""> 10:45 am
+            </div>
+          </div>
+        </div>
+  
+        <h3 class="month">November</h3>
+  
+        <div class="event">
+          <div class="event-left">
+            <div class="event-date">
+              <div class="date">8</div>
+            </div>
+          </div>
+  
+          <div class="event-right">
+            <h3 class="event-title">Event Title</h3>
+  
+            <div class="event-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus,
+              ratione.
+            </div>
+  
+            <div class="event-timing">
+              <img src="images/time.png" alt=""> 10:00 am
+            </div>
+          </div>
+        </div>
+  
+        <div class="event">
+          <div class="event-left">
+            <div class="event-date">
+              <div class="date">9</div>
+            </div>
+          </div>
+  
+          <div class="event-right">
+            <h3 class="event-title">Event Title</h3>
+  
+            <div class="event-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus,
+              ratione.
+            </div>
+  
+            <div class="event-timing">
+              <img src="images/time.png" alt=""> 10:30 am
+            </div>
+          </div>
+        </div>
+  
+        <div class="event">
+          <div class="event-left">
+            <div class="event-date">
+              <div class="date">4</div>
+            </div>
+          </div>
+  
+          <div class="event-right">
+            <h3 class="event-title">Event Title</h3>
+  
+            <div class="event-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus,
+              ratione.
+            </div>
+  
+            <div class="event-timing">
+              <img src="images/time.png" alt=""> 10:00 am
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    </div>
 </div>
 </main>
-<!--<section>
-  <div class="wrapper">
-    <header>
-      <p class="current-date">2024</p>
-      <div class="icons">
-        <span id="prev" class="material-symbols-rounded">chevron_left</span>
-        <span id="next" class="material-symbols-rounded">chevron_right</span>
-      </div>
-    </header>
-    <div class="calendar">
-      <ul class="weeks">
-        <li>Sun</li>
-        <li>Mon</li>
-        <li>Tue</li>
-        <li>Wed</li>
-        <li>Thu</li>
-        <li>Fri</li>
-        <li>Sat</li>
-      </ul>
-      <ul class="days">
-        <li>29</li>
-        <li>30</li>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li>10</li>
-        <li>11</li>
-        <li>12</li>
-        <li>13</li>
-        <li>14</li>
-        <li>15</li>
-        <li>16</li>
-        <li>17</li>
-        <li>18</li>
-        <li>19</li>
-        <li>20</li>
-        <li>21</li>
-        <li>22</li>
-        <li>23</li>
-        <li>24</li>
-        <li>25</li>
-        <li>26</li>
-        <li>27</li>
-        <li>28</li>
-        <li>29</li>
-        <li>30</li>
-        <li>31</li>
-        <li>1</li>
-        <li>2</li>
-      </ul>
-    </div>
-  </div>
-</section>-->
 <footer>
   <p>Follow us:
     <a href="https://www.facebook.com/ConnectingThroughCharity/?locale=nl_NL" class="fab fa-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
