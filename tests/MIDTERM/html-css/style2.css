@@ -40,7 +40,13 @@ h1, h4{
 }
 
 footer{
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f8f9fa;
+  width: auto;
+  padding: 20px;
 }
 
 

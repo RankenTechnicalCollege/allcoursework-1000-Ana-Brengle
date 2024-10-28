@@ -137,11 +137,11 @@ form button{
 }
 
 footer{
-  position: fixed;
-  bottom: 0; 
-  right: 0; 
-  text-align: right;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background-color: #f8f9fa;
   width: auto;
+  padding: 20px;
 }

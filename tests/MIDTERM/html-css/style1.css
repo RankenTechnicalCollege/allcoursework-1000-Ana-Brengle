@@ -54,7 +54,7 @@ header img{
   justify-content: center;
   padding: 20px;
   gap: 20px;
-  background-color: #3632D5;
+  background-color: #7EC6F2;
 }
 
 .card {
@@ -65,6 +65,13 @@ header img{
 
 
 /* FOOTER */
-footer{
 
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f8f9fa;
+  width: auto;
+  padding: 20px;
 }

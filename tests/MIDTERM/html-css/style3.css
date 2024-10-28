@@ -5,47 +5,72 @@
   font-family: 'Poppins', sans-serif;
 }
 
+header img{
+  height: 100px;
+  width: 100px;
+}
+
+.heading-car{
+  background-color: #5D7A8C;
+}
 #carouselExampleControls {
-  width: 100%; /* Adjust the width as needed */
+  width: 100%;
   max-width: 700px;
-  margin: auto; /* Center the carousel */
+  margin: auto;
 }
 
 .carousel-inner {
-  height: 450px; /* Set a fixed height for the carousel */
+  height: 450px;
 }
 
 .carousel-item img {
-  width: 100%; /* Make the image take up the full width */
-  height: 100%; /* Ensure the image takes up the full height */
-  object-fit: contain; /* Maintain aspect ratio while covering the area */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
+main{
+  background-color: #797ED1;
+}
 
-.photo-list{
+.container{
+  max-width: 1224px;
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.title{
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 100px;
+}
+
+.photo-gallery{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: stretch;
-  align-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
 }
-.photo{
+
+.column{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex-basis: 200px;
-  flex-grow: 0;
-  flex-shrink: 0;
-  text-align: center;
+  gap: 20px;
 }
-.photo-img{
+
+.photo img{
   width: 100%;
-  height: 200px;
-  flex-grow: 1;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;  
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  border-style: solid;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f8f9fa;
+  width: auto;
+  padding: 20px;
 }
