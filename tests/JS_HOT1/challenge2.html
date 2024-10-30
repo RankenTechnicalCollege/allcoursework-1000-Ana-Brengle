@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Age Verification</h2>
+  <input type="text" id="ageInput" placeholder="Enter your age">
+  <button onclick="verifyAge()">Verify Age</button>
+  <div id="ageMessage"></div>
+
+  <script>
+    function verifyAge() {  
+
+    let age = document.getElementById("ageInput").value;  
+
+    if (isNaN(age)) {  
+    document.getElementById("ageMessage").innerHTML = "Please enter your age!";  
+    } else if (age < 1 || age > 200) {  
+    document.getElementById("ageMessage").innerHTML = "Age out of range!";  
+    } else if (age >= 21) {  
+    document.getElementById("ageMessage").innerHTML = "Welcome to the venue!";  
+    } else {  
+    document.getElementById("ageMessage").innerHTML = "You're not old enough!";  
+    }  
+  }
+  </script>
+</body>
+</html>

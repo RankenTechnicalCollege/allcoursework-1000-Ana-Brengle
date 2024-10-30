@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h2>My Favorite Movies of all time</h2>
+    <input type="text" id="movieInput" placeholder="Enter your Favorite Movie">
+    <button onclick="addMovie()">Add a Movie</button>
+    <ul id="movieList"></ul>
+
+    <script>
+      let favoriteMovies = ['E.T', 'Hocus Pocus', 'IT'];
+
+      function addMovie() {  
+        let newMovie = document.getElementById("movieInput").value;  
+        favoriteMovies.push(newMovie);  
+        printMovies();  
+      }  
+        
+      function printMovies() {  
+        let movieList = "";  
+        for (let i = 0; i < favoriteMovies.length; i++) {  
+          movieList += "<li>" + favoriteMovies[i] + "</li>";
+        }  
+        document.getElementById("movieList").innerHTML = movieList;  
+      }
+    </script>
+</body>
+</html>
