@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    width: 600px;
+    border: 3px solid blue;
+    padding: 0 2em 1em;
+}
+
+  h1{
+  color: blue;
+}
+
+  div{
+  margin-bottom: 1em;
+}
+
+  label{
+  display: inline-block;
+  width: 10em;
+  text-align: right;
+  margin-right: 0.5em;
+}
+  </style>
+</head>
+<body>
+  <div class="lab">
+    <h1>Miles Per Gallon</h1>
+    <div>
+      <label for="miles">Miles driven:</label>
+      <input type="text" id="miles">
+    </div>
+    <div>
+      <label for="gallon">Gallons of Gas Used</label>
+      <input type="text" name="" id="gallons">
+    </div>
+    <div>
+      <label for="mpg">Miles Per Gallon</label>
+      <input type="text" name="" id="mpg">
+    </div>
+    <div>
+      <label>&nbsp;</label>
+      <input type="button" id="calculate" value="calculate mgp">
+      <input type="button" id="clear_form" value="Clear Form">
+    </div>
+  </div>
+
+  <div class="lab">
+    <h1>The Future Value Calculator</h1>
+    <div>
+      <label for="investment">Total Investment:</label>
+      <input type="text" id="investment">
+    </div>
+    <div>
+      <label for="rate">Annual Interest Rate:</label>
+      <input type="text" id="rate">
+    </div>
+    <div>
+      <label for="years">Number of Years:</label>
+      <input type="text" id="years">
+    </div>
+    <div>
+      <label for="future_value">Future Value:</label>
+      <input type="text" id="future_value" readonly>
+    </div>
+    <div>
+      <label>&nbsp;</label>
+      <input type="button" id="calculate_fv" value="Calculate Future Value">
+    </div>
+  </div>
+  <script>
+
+      //MILES PER GALLON 
+    const $ = selector => document.querySelector(selector);
+    const getErrorMsg = lbl =>
+    `$(lbl) must be a valid number greater than zero`;
+
+    const focusAndSelect = selector => {
+    const elem = $(selector);
+    elem.focus();
+    elem.select();
+    };
+
+    const processEntries = () => {
+        const miles = parseFloat($("#miles").value);
+        const gallons = parseFloat($("#gallons").value);
+
+        if (isNaN(miles) || miles <= 0) {
+            alert(getErrorMsg("Miles driven"));
+            focusAndSelect("#miles");
+        } else if (isNaN(gallons) || gallons <= 0) {
+            alert(getErrorMsg("Gallons of gas used"));
+            focusAndSelect("#gallons");
+        } else {
+            $("#mpg").value = (miles / gallons).toFixed(2);
+        }
+    };
+
+    const clearForm = () => {
+      $("#miles").value = '';
+      $("#gallons").value = '';
+      $("#mpg").value = '';
+      $("#miles").focus();
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        $("#calculate").addEventListener("click", processEntries);
+        $("#clear_form").addEventListener("click", clearForm);
+        $("#miles").focus();
+    });
+
+    // FUTURE VALUE 
+
+    const calculateFV = function(investment,rate,years){
+      let futureValue = investment;
+      for (let i = 1; i <= years; i++ ) {
+        futureValue += futureValue * rate / 100;
+    }
+      return futureValue
+  }
+  document.getElementById('calculate_fv').addEventListener('click', () => {
+    const investment = parseFloat(document.getElementById('investment').value);
+    const rate = parseFloat(document.getElementById('rate').value);
+    const years = parseFloat(document.getElementById('years').value);
+
+    if(isNaN(investment) || isNaN(rate) || isNaN(years)) {
+      alert('please enter valid numbers for investment, rate, and years');
+      return;
+    }
+    const futureValue = calculateFV(investment, rate, years);
+    document.getElementById('future_value').value = futureValue.toFixed(2);
+  });
+  </script>
+</body>
+</html>
