@@ -7,38 +7,86 @@
   <title>Document</title>
 </head>
 <body>
-    <div class="container mt-5">
-      <h1>Make Change</h1>
-      <div class="mb-3 row">
-          <label for="amount" class="form-label">Enter Amount (0-99 cents):</label>
-          <input type="number" id="amount" class="form-control">
-        <div>
-          <button id="makeChangeBtn" class="btn btn-primary mt-3">Make Change</button>
-        </div>
+  <!-- SALES TAX CALCULATOR -->
+<div class="container mt-5">
+  <h1>Sales Tax Calculator</h1>
+  <p>Enter Subtotal and Tax Rate and click "Calculate".</p>
+  <div class="mt-4">
+    <div class="row mb-3">
+      <div class="col-md-6 d-flex align-items-center">
+        <label for="subtotal" class="form-label me-2 p-3">Subtotal:</label>
+        <input type="number" id="subtotal" class="form-control">
       </div>
-      <div class="mt-4">
-          <div class="col">
-              <div class="col-md-5">
-                  <label for="quarters" class="form-label">Quarters:</label>
-                  <output id="quarters" class="form-control" readonly></output>
-              </div>
-              <div class="col-md-5">
-                  <label for="dimes" class="form-label">Dimes:</label>
-                  <output id="dimes" class="form-control" readonly></output>
-              </div>
-              <div class="col-md-5">
-                  <label for="nickels" class="form-label">Nickels:</label>
-                  <output id="nickels" class="form-control" readonly></output>
-              </div>
-              <div class="col-md-5">
-                  <label for="pennies" class="form-label">Pennies:</label>
-                  <output id="pennies" class="form-control" readonly></output>
-              </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6 d-flex align-items-center">
+        <label for="tax-rate" class="form-label me-2 p-3">Tax Rate:</label>
+        <input type="number" id="taxRate" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6 d-flex align-items-center">
+        <label for="sales-tax" class="form-label me-2 p-3">Sales tax:</label>
+        <output id="salesTax" class="form-control" readonly></output>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6 d-flex align-items-center">
+        <label for="total" class="form-label me-2 p-3">Total:</label>
+        <output id="total" class="form-control" readonly></output>
+      </div>
+    </div>
+    <div class="row mb-3 ">
+      <div class="col-md-6">
+        <button id="calculate" class="btn btn-primary">Calculate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--CHANGE CALCULATOR -->
+  <div class="container mt-5 ">
+    <h1>Change Calculator</h1>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="amount" class="col-form-label">Enter Amount (0-99 cents):</label>
+      </div>
+      <div class="col-auto">
+        <input type="number" id="amount" class="form-control">
+      </div>
+      <div class="col-auto">
+        <button id="makeChangeBtn" class="btn btn-primary">Calculate</button>
+      </div>
+    </div>
+    <div class="mt-4">
+      <div class="row mb-3">
+          <div class="col-md-6 d-flex align-items-center">
+              <label for="quarters" class="form-label me-2 p-3">Quarters:</label>
+              <output id="quarters" class="form-control" readonly></output>
+          </div>
+      </div>
+      <div class="row mb-3">
+          <div class="col-md-6 d-flex align-items-center">
+              <label for="dimes" class="form-label me-2 p-3">Dimes:</label>
+              <output id="dimes" class="form-control" readonly></output>
+          </div>
+      </div>
+      <div class="row mb-3">
+          <div class="col-md-6 d-flex align-items-center">
+              <label for="nickels" class="form-label me-2 p-3">Nickels:</label>
+              <output id="nickels" class="form-control" readonly></output>
+          </div>
+      </div>
+      <div class="row mb-3">
+          <div class="col-md-6 d-flex align-items-center">
+              <label for="pennies" class="form-label me-2 p-3">Pennies:</label>
+              <output id="pennies" class="form-control" readonly></output>
           </div>
       </div>
   </div>
 
   <script>
+
+    // CHANGE CALCULATOR
     document.addEventListener('DOMContentLoaded', function() {
       const makeChangeBtn = document.getElementById('makeChangeBtn');
       makeChangeBtn.addEventListener('click', makeChange);
