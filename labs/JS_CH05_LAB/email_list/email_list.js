@@ -2,7 +2,7 @@ const $ = selector => document.querySelector(selector);
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    $("#join_List").addEventListener("click", () => {
+    $("#join_list").addEventListener("click", () => {
         // get values user entered in textboxes
         const email1 = $("#email_1").value;
         const email2 = $("#email_2").value;
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         // submit the form if error message is an empty string
-        if (errorMessage = "") {
+        if (errorMessage == "") {
             $("#email_form").submit();
         } else {
             alert(errorMessage);            
