@@ -218,22 +218,21 @@ function calculateTax() {
       if(income <= 9875){
         taxOwed= income * 0.10;
       } else if(income <= 40125){
-        taxOwed = 987.50 + (income - 9875) * 0.12;
+        taxOwed = income * 0.12;
       }else if(income <= 85525){
-        taxOwed = 4617.50 + (income - 40125) * 0.22;
+        taxOwed = income * 0.22;
       }else if(income <= 163300){
-        taxOwed = 14605.50 + (income - 85525) * 0.24;
+        taxOwed = income * 0.24;
       }else if(income <= 207350){
-        taxOwed = 33271.50 + (income - 163300) * 0.32;
+        taxOwed = income * 0.32;
       }else if(income <= 518400){
-        taxOwed = 47367.50 + (income - 207350) * 0.35;
+        taxOwed = income * 0.35;
       }else{
-        taxOwed = 156235.00 + (income - 518400) * 0.37;
+        taxOwed = income * 0.37;
       }
 
       document.getElementById('tax').value = taxOwed.toFixed(2);
     }
-
 
   </script>
 
