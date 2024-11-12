@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="lab3-5.css">
   <title>Document</title>
 </head>
 <body>
@@ -49,7 +50,7 @@
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
-  const makeChangeBtn = document.getElementById('calculate'); 
+  const calculateBtn = document.getElementById('calculate'); 
   calculate.addEventListener('click', calculateTax);
 
   clear_form.addEventListener('click',function(){
@@ -173,6 +174,71 @@ function calculateTax() {
 
     };
   </script>
+
+  <div class="container mt-5">
+    <h2>Income Tax Calculator</h2>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="taxIncome" class="col-form-label">Enter Taxable Income:</label>
+      </div>
+      <div class="col-auto">
+        <input type="number" id="taxIncome" class="form-control">
+      </div>
+      <div class="col-auto">
+        <button id="incomeCal" class="btn btn-primary">Calculate</button>
+      </div>
+    </div>
+    <div class="mt-5">
+      <div class="row mb-3">
+          <div class="col-md-6 d-flex align-items-center">
+              <label for="tax_owed" class="form-label me-2 p-3">Income Tax Owed:</label>
+              <output id="tax" class="form-control" readonly></output>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const incomeCalBtn = document.getElementById('incomeCal');
+      incomeCalBtn.addEventListener('click', taxOwed);
+    });
+
+    function taxOwed() {
+      const income = parseFloat(document.getElementById('taxIncome').value)
+
+      if(isNaN(income) || income < 0){
+        alert('Please enter a valid number.');
+        return;
+      }
+
+      var taxOwed = 0
+
+      if(income <= 9875){
+        taxOwed= income * 0.10;
+      } else if(income <= 40125){
+        taxOwed = 987.50 + (income - 9875) * 0.12;
+      }else if(income <= 85525){
+        taxOwed = 4617.50 + (income - 40125) * 0.22;
+      }else if(income <= 163300){
+        taxOwed = 14605.50 + (income - 85525) * 0.24;
+      }else if(income <= 207350){
+        taxOwed = 33271.50 + (income - 163300) * 0.32;
+      }else if(income <= 518400){
+        taxOwed = 47367.50 + (income - 207350) * 0.35;
+      }else{
+        taxOwed = 156235.00 + (income - 518400) * 0.37;
+      }
+
+      document.getElementById('tax').value = taxOwed.toFixed(2);
+    }
+
+
+  </script>
+
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
