@@ -24,9 +24,7 @@ input {
 span {
     color: red;
 }
-.error {
+.error{
     color: red;
-    font-size: 12px;
-    margin-left: 10px;
-    font-weight: bold;
+    
 }
