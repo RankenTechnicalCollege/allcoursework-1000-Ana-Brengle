@@ -39,11 +39,28 @@
     const addScore = () => {
 
       const name = $('#name').value;
-      const score =parseInt(('#score').value);
+      const score = parseInt(('#score').value);
+      let isValid = true;
 
+      if(name == ''){
+        $('#name').nextElementSibling.textContent = 'Please enter a name.'
+        isValid = false;
+      }else{
+        $('#name').nextElementSibling.textContent = ''
+      }
+
+      if(isNaN(score) || score < 0 || score > 100){
+        $('#score').nextElementSibling.textContent = 'Score must be between 0 and 100.'
+        isValid = false;
+      } else{
+        $('score').nextElementSibling.textContent = ''
+      }
 
     }
 
+    if(isValid){
+      
+    }
 
   </script>
 </body>
