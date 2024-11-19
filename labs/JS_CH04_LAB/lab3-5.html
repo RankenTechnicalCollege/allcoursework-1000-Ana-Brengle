@@ -76,13 +76,13 @@ function calculateTax() {
   let subtotal = parseFloat(subtotalInput.value);
   let taxRate = parseFloat(taxRateInput.value);
 
-  if(isNaN(subtotal) || subtotal <= 0 || subtotal >= 10000 ){
+  if(isNaN(subtotal) || subtotal <= 0 || subtotal > 10000 ){
     alert("Enter a number between 0 and 10,000");
     subtotalInput.focus();
     return;
   }
 
-  if(isNaN(taxRate) || taxRate <= 0 || taxRate >= 12){
+  if(isNaN(taxRate) || taxRate <= 0 || taxRate > 12){
     alert("Enter a number between 0 and 12");
     taxRateInput.focus();
     return;
@@ -163,7 +163,7 @@ function calculateTax() {
       amount = amount % 10;
 
       const nickels = parseInt(amount / 5);
-      amount % 5;
+      amount = amount % 5;
 
       const pennies = parseInt(amount);
 
@@ -218,17 +218,17 @@ function calculateTax() {
       if(income <= 9875){
         taxOwed= income * 0.10;
       } else if(income <= 40125){
-        taxOwed = income * 0.12;
+        taxOwed = 987.50 + (income - 9875) * 0.12;
       }else if(income <= 85525){
-        taxOwed = income * 0.22;
+        taxOwed = 4617.50 + (income - 40125)  * 0.22;
       }else if(income <= 163300){
-        taxOwed = income * 0.24;
+        taxOwed = 14605.50 + (income - 85525) * 0.24;
       }else if(income <= 207350){
-        taxOwed = income * 0.32;
+        taxOwed = 33271.50 + (income - 163300) * 0.32;
       }else if(income <= 518400){
-        taxOwed = income * 0.35;
+        taxOwed = 47367.50 + (income - 207350) * 0.35;
       }else{
-        taxOwed = income * 0.37;
+        taxOwed = 156235.00 + (income - 518400) * 0.37;
       }
 
       document.getElementById('tax').value = taxOwed.toFixed(2);
