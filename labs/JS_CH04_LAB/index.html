@@ -129,10 +129,21 @@
     const rate = parseFloat(document.getElementById('rate').value);
     const years = parseFloat(document.getElementById('years').value);
 
-    if(isNaN(investment) || isNaN(rate) || isNaN(years)) {
-      alert('please enter valid numbers for investment, rate, and years');
-      return;
-    }
+    if (isNaN(investment) || investment <= 0) {
+    alert('Please enter a positive number for investment rate.');
+    return;
+  }else
+
+  if (isNaN(rate) || rate < 0 || rate > 100) {
+    alert('Please enter a number for the interest rate 0-100.');
+    return;
+  }
+
+  if (isNaN(years) || years <= 0) {
+    alert('Please enter a number for years.');
+    return;
+  }
+
     const futureValue = calculateFV(investment, rate, years);
     document.getElementById('future_value').value = futureValue.toFixed(2);
   });
