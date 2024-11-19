@@ -99,7 +99,13 @@ footer{
     align-items: center;
   }
   .button{
-    order: -1;
+    order: 3;
+  }
+  .header-middle{
+    order: 2;
+  }
+  .header-right{
+    order: 1;
   }
   .navbar-links {
     flex-direction: column;
