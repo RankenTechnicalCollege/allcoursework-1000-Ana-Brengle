@@ -11,12 +11,12 @@
     <div>
       <label for="name">Name:</label>
       <input type="text" id="name">
-      <span>*</span>
+      <span id="nameError">*</span>
     </div>
     <div>
       <label for="score">Score:</label>
       <input type="number"  id="score">
-      <span>*</span>
+      <span id="scoreError">*</span>
     </div>
     <div>
       <button type="button" id="add-score">Add to Array</button>
@@ -24,10 +24,13 @@
       <button type="button" id="display-scores">Display Scores</button>
     </div>
     <div>
-      <textarea id="scoresDisplay"></textarea>
+      <h3>Scores:</h3>
+      <p id="scores"></p>
     </div>
-    <p id="results"></p>
-    <p id="scores"></p>
+    <div>
+      <h3>Results:</h3>
+      <p id="results"></p>
+    </div>
   </main>
   <script>
 
@@ -39,29 +42,49 @@
     const addScore = () => {
 
       const name = $('#name').value;
-      const score = parseInt(('#score').value);
+      const score = parseInt($('#score').value);
       let isValid = true;
 
+      $('#nameError').textContent = '';
+      $('#scoreError').textContent = '';
+
       if(name == ''){
-        $('#name').nextElementSibling.textContent = 'Please enter a name.'
+        $('#nameError').textContent = 'Please enter a name.'
         isValid = false;
-      }else{
-        $('#name').nextElementSibling.textContent = ''
       }
 
       if(isNaN(score) || score < 0 || score > 100){
-        $('#score').nextElementSibling.textContent = 'Score must be between 0 and 100.'
+        $('#scoreError').textContent = 'Score must be between 0 and 100.'
         isValid = false;
-      } else{
-        $('score').nextElementSibling.textContent = ''
       }
 
-    }
 
     if(isValid){
-      
-    }
+      names.push(name);
+      scores.push(score);
 
+      $('#name').value = '';
+      $('#score').value = '';
+      $('#name').focus();
+    }
+  };
+
+  const displayScores = () => {
+    const scoresList = names.map((name, index) => `${name}: ${scores[index]}`).join('<br>');
+    $('#scores').innerHTML = scoresList;
+  };
+
+  const displayResults = () => {
+
+    const total = scores.reduce((sum, score) => sum + score, 0);
+      const average = total / scores.length;
+      $('#results').innerHTML = `Total Score: ${total} <br> Average Score: ${average.toFixed(2)}`;
+
+  };
+
+  $('#add-score').addEventListener('click', addScore);
+  $('#display-scores').addEventListener('click', displayScores);
+  $('#display-results').addEventListener('click', displayResults);
   </script>
 </body>
 </html>
