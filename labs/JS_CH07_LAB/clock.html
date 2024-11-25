@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Digital Clock</h1>
+  <div id="clock">3:10:47</div>
+  <script>
+
+    setInterval(showTime, 1000);
+    
+    function showTime(){
+
+    let time = new Date();
+    let hour = time.getHours()
+    let min = time.getMinutes();
+    let sec = time.getSeconds();
+    am_pm = "AM";
+
+    if(hour >= 12){
+      am_pm = "PM";
+    }else if(hour == 0){
+      hr = 12;
+      am_pm = "AM";
+    }
+
+    document.getElementById('clock').innerHTML =  hour + ":" + min + ":" + sec + am_pm;
+    
+
+    }
+   
+  </script>
+</body>
+</html>

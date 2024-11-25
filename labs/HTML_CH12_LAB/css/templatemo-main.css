@@ -295,7 +295,7 @@ nav a:hover::before {
 }
 
 .slides .slide:nth-child(1) {
-  background-image: url(../img/first_bg.jpg);
+  background-image: url(../img/NEWfirst-pg.jpg);
 }
 .slides .slide:nth-child(2) {
   background-image: url(../img/second_bg.jpg);
@@ -513,6 +513,17 @@ nav a:hover::before {
 	margin-bottom: 20px;
 	margin-top: 0px;
 }
+.third-content h3{
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: normal;
+	border-bottom: 2px solid #fff;
+	display: inline-block;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
 
 .third-content p {
 	font-size: 13px;
@@ -638,8 +649,11 @@ nav a:hover::before {
 .fifth-content #contact {
 	padding: 50px 50px 50px 50px;
 }
+.fifth-content #contact-form{
+	padding: 50px 50px 50px 50px;
+}
 
-.fifth-content input {
+/* .fifth-content input {
   border-radius: 0px;
   padding-left: 15px;
   font-size: 13px;
@@ -653,9 +667,9 @@ nav a:hover::before {
   height: 40px;
   width: 100%;
   margin-bottom: 25px;
-}
+} */
 
-.fifth-content textarea {
+/* .fifth-content textarea {
   border-radius: 0px;
   padding-left: 15px;
   padding-top: 10px;
@@ -692,7 +706,7 @@ nav a:hover::before {
 .fifth-content button:hover {
 	color: #232323;
 	background-color: #fff;
-}
+} */
 
 .footer .content {
 	left: 30%;
